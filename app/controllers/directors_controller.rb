@@ -14,22 +14,10 @@ class DirectorsController < ApplicationController
   end
 
   def junior
-    the_id = params.fetch("the_id")
-
-    matching_records = Director.where({ :id=> the_id })
-
-    @the_director = matching_records.at(0)
-
     render({ :template => "director_templates/junior" })
   end
 
   def senior
-    the_id = params.fetch("the_id")
-
-    matching_records = Director.where({ :id=> the_id })
-
-    @the_director = matching_records.at(0)
-
     render({ :template => "director_templates/senior" })
   end
 end
